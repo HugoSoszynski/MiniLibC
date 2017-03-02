@@ -1,7 +1,6 @@
 	section .text
 
 	global strlen
-	extern printf
 
 strlen:
 	xor rax, rax
