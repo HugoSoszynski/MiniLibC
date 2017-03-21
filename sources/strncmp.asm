@@ -1,27 +1,27 @@
-	section .text
+section .text
 
-	global	strcmp
+global	strncmp
 
 
-stcmp:
+strncmp:
 	xor rax, rax
 	xor r11, r11
+	sub rdx, 1
 
 .loop:
-	mov rax, [rdi]
-	sub rax, [rsi]
-	cmp rax, byte 0
+	mov al, byte[rdi + r11]
+	cmp al, byte[rsi + r11]
 	jnz .exit
-	cmp [rdi], byte 0
+	cmp byte[rdi + r11], 0
 	jz  .exit
-	cmp [rsi], byte 0
+	cmp byte[rsi + r11], 0
 	jz  .exit
-	cmp r11, word rdx
+	cmp r11, rdx
 	jz .exit
 	inc r11
-	inc rdi
-	inc rsi
 	jmp .loop
 
 .exit:
+	sub al, byte[rsi + r11]
+	movsx rax, al
 	ret

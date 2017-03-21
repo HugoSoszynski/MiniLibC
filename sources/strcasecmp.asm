@@ -1,29 +1,34 @@
-	section .text
+section .text
 
-	global	strcmp
+global	strcasecmp
 
 
-stcmp:
+strcasecmp:
 	xor rax, rax
+	xor r11, r11
 	jmp .loop
 
 .inc:
-	inc rdi
-	inc rsi
+	inc r11
 
 .loop:
-	mov rax, [rdi]
-	sub rax, [rsi]
-	cmp rax, byte 0
+	cmp byte[rdi + r11], 0
+	jz  .exit_success
+	cmp byte[rsi + r11], 0
+	jz  .exit_success
+	mov al, byte[rdi + r11]
+	sub al, byte[rsi + r11]
+	cmp al, 0
 	jz .inc
-	cmp rax, byte 32
+	cmp al, 32
 	jz .inc
-	cmp rax, byte -32
+	cmp al, -32
 	jz .inc
-	cmp [rdi], byte 0
-	jz  .exit
-	cmp [rsi], byte 0
-	jz  .exit
 
-.exit:
+.exit_failure:
+	movsx rax, al
+	ret
+
+.exit_success:
+	xor rax, rax
 	ret
