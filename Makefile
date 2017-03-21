@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Wed Mar  1 17:55:47 2017 Hugo SOSZYNSKI
-## Last update Thu Mar  2 16:19:44 2017 Hugo SOSZYNSKI
+## Last update Tue Mar 21 17:31:13 2017 Hugo SOSZYNSKI
 ##
 
 LD	= ld
@@ -22,7 +22,8 @@ NAME	= libasm.so
 
 SRCS	= sources/strlen.asm \
 	  sources/strcmp.asm \
-	  sources/strcmp.asm
+	  sources/strncmp.asm \
+	  sources/strcasecmp.asm
 
 OBJS	= $(SRCS:.asm=.o)
 
