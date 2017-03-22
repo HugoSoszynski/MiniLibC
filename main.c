@@ -21,5 +21,12 @@ int main(int ac, char **av)
   printf("strcasecmp(av[0], \"BITE\") : %d\n", strcasecmp(av[0], "BITE"));
   printf("strcasecmp(av[0], \"bite\") : %d\n", strcasecmp(av[0], "bite"));
 
+  printf("---------------------------------------\n");
+  printf("strstr(\"./a.out\", av[0]) : %s\n", strstr("./a.out", av[0]));
+  printf("strstr(\"./a.outtoto\", av[0]) : %s\n", strstr("./a.outtoto", av[0]));
+  printf("strstr(\"toto./a.out\", av[0]) : %s\n", strstr("toto./a.out", av[0]));
+  printf("strstr(\"toto./a.outtoto\", av[0]) : %s\n", strstr("toto./a.outtoto", av[0]));
+  printf("strstr(\"totototototototo\", av[0]) : %s\n", strstr("totototototototo", av[0]));
+
   return 0;
 }
