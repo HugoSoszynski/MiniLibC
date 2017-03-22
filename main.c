@@ -4,9 +4,22 @@
 int main(int ac, char **av)
 {
   printf("strlen(av[0]) : %d\n", strlen(av[0]));
-  printf("strcmp(av[0], \"BITE\") : %d\n", strcmp(av[0], "BITE"));
+
+  printf("---------------------------------------\n");
+  printf("strcmp(av[0], \"./a.our\") : %d\n", strcmp(av[0], "BITE"));
   printf("strcmp(av[0], \"./a.out\") : %d\n", strcmp(av[0], "./a.out"));
+
+  printf("---------------------------------------\n");
   printf("strncmp(av[0], \"BITE\", 4) : %d\n", strncmp(av[0], "BITE", 4));
   printf("strncmp(av[0], \"./aBITE\", 3) : %d\n", strncmp(av[0], "./aBITE", 3));
+
+  printf("---------------------------------------\n");
+  printf("strcasecmp(av[0], \"./a.out\") : %d\n", strcasecmp(av[0], "./a.out"));
+  printf("strcasecmp(av[0], \"./A.OUT\") : %d\n", strcasecmp(av[0], "./A.OUT"));
+  printf("strcasecmp(\"./A.OUT\", av[0]) : %d\n", strcasecmp("./A.OUT", av[0]));
+  printf("strcasecmp(av[0], \"./ç`TE\") : %d\n", strcasecmp(av[0], "./ç`TE"));
+  printf("strcasecmp(av[0], \"BITE\") : %d\n", strcasecmp(av[0], "BITE"));
+  printf("strcasecmp(av[0], \"bite\") : %d\n", strcasecmp(av[0], "bite"));
+
   return 0;
 }
