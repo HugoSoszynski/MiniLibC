@@ -28,5 +28,10 @@ int main(int ac, char **av)
   printf("strstr(\"toto./a.outtoto\", av[0]) : %s\n", strstr("toto./a.outtoto", av[0]));
   printf("strstr(\"totototototototo\", av[0]) : %s\n", strstr("totototototototo", av[0]));
 
+  printf("---------------------------------------\n");
+  printf("strpbrk(av[0], \"yolo\") : %s\n", strpbrk(av[0], "yolo"));
+  printf("strpbrk(av[0], \"yolo.\") : %s\n", strpbrk(av[0], "yolo."));
+  printf("strpbrk(av[0], \"yili\") : %s\n", strpbrk(av[0], "yili"));
+
   return 0;
 }
