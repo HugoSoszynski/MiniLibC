@@ -14,7 +14,7 @@ strstr:
 	jz .equesite_faillelure
 	xor r10, r10
 	mov r8, r11
-	
+
 .la_chenille_qui_redemarre:
 	cmp byte[rsi + r10], 0
 	jz .equesite_suquecesse

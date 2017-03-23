@@ -33,5 +33,10 @@ int main(int ac, char **av)
   printf("strpbrk(av[0], \"yolo.\") : %s\n", strpbrk(av[0], "yolo."));
   printf("strpbrk(av[0], \"yili\") : %s\n", strpbrk(av[0], "yili"));
 
+  printf("---------------------------------------\n");
+  printf("strchr(av[0], '/') : %s\n", strchr(av[0], '/'));
+  printf("strchr(av[0], '\\0') : %s\n", strchr(av[0], '\0'));
+  printf("strchr(av[0], 'y') : %s\n", strchr(av[0], 'y'));
+
   return 0;
 }
