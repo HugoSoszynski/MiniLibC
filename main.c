@@ -38,5 +38,11 @@ int main(int ac, char **av)
   printf("strchr(av[0], '\\0') : %s\n", strchr(av[0], '\0'));
   printf("strchr(av[0], 'y') : %s\n", strchr(av[0], 'y'));
 
+  printf("---------------------------------------\n");
+  printf("strcspn(av[0], \"toto\") : %d\n", strcspn(av[0], "toto"));
+  printf("strcspn(av[0], \"o\") : %d\n", strcspn(av[0], "o"));
+  printf("strcspn(av[0], \"pipi\") : %d\n", strcspn(av[0], "pipi"));
+  printf("strcspn(av[0], \"\") : %d\n", strcspn(av[0], ""));
+
   return 0;
 }
