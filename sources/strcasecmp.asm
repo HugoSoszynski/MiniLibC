@@ -15,10 +15,6 @@ strcasecmp:
 	inc r11
 
 .loop:
-	cmp byte[rdi + r11], 0
-	jz  .exit_success
-	cmp byte[rsi + r11], 0
-	jz  .exit_success
 	mov al, byte[rdi + r11]
 	mov dl, byte[rsi + r11]
 	cmp al, 'A'
@@ -36,10 +32,14 @@ strcasecmp:
 
 .lower:
 	sub al, dl
+	cmp byte[rdi + r11], 0
+	jz  .exit
+	cmp byte[rsi + r11], 0
+	jz  .exit
 	cmp al, 0
 	jz .inc
 
-.exit_failure:
+.exit:
 	movsx rax, al
 	ret
 

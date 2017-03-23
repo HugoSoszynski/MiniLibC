@@ -20,6 +20,7 @@ int main(int ac, char **av)
   printf("strcasecmp(av[0], \"./ç`TE\") : %d\n", strcasecmp(av[0], "./ç`TE"));
   printf("strcasecmp(av[0], \"BITE\") : %d\n", strcasecmp(av[0], "BITE"));
   printf("strcasecmp(av[0], \"bite\") : %d\n", strcasecmp(av[0], "bite"));
+  printf("strcasecmp(av[0], \"\") : %d\n", strcasecmp(av[0], ""));
 
   printf("---------------------------------------\n");
   printf("strstr(\"./a.out\", av[0]) : %s\n", strstr("./a.out", av[0]));
