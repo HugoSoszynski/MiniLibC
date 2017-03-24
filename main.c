@@ -44,6 +44,9 @@ int main(int ac, char **av)
   printf("strcspn(av[0], \"o\") : %d\n", strcspn(av[0], "o"));
   printf("strcspn(av[0], \"pipi\") : %d\n", strcspn(av[0], "pipi"));
   printf("strcspn(av[0], \"\") : %d\n", strcspn(av[0], ""));
-
+  printf("---------------------------------------\n");
+  dprintf(1, "write(1, av[0][2], 1) : ");
+  write(1, &av[0][2], 1);
+  printf("\n");
   return 0;
 }

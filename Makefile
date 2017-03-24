@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Wed Mar  1 17:55:47 2017 Hugo SOSZYNSKI
-## Last update Thu Mar 23 14:47:25 2017 loens_g
+## Last update Fri Mar 24 14:35:20 2017 loens_g
 ##
 
 LD	= ld
@@ -28,7 +28,9 @@ SRCS	= sources/strlen.asm \
 	  sources/entrypoint.asm \
 	  sources/strpbrk.asm \
 	  sources/strchr.asm \
-	  sources/strcspn.asm
+	  sources/strcspn.asm \
+	  sources/write.asm \
+	  sources/read.asm
 
 OBJS	= $(SRCS:.asm=.o)
 
