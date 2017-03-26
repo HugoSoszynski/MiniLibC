@@ -52,10 +52,15 @@ int main(int ac, char **av)
 
   printf("---------------------------------------\n");
   char test[11];
+  char test2[11];
   test[10] = 0;
+  test2[10] = 0;
   printf("memset(test, 'A', 10) : %s\n", memset(test, 'A', 10));
+  printf("memcpy(test2, test, 10) : %s\n", memcpy(test2, test, 10));
   printf("memset(test, 'B', 10) : %s\n", memset(test, 'B', 10));
+  printf("memcpy(test2, test, 10) : %s\n", memcpy(test2, test, 10));
   printf("memset(test, 42, 10) : %s\n", memset(test, 42, 10));
+  printf("memcpy(test2, test, 10) : %s\n", memcpy(test2, test, 10));
 
   printf("---------------------------------------\n");
   dprintf(1, "write(1, av[0][2], 1) : ");
