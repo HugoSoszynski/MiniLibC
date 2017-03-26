@@ -28,6 +28,10 @@ int main(int ac, char **av)
   printf("strstr(\"toto./a.out\", av[0]) : %s\n", strstr("toto./a.out", av[0]));
   printf("strstr(\"toto./a.outtoto\", av[0]) : %s\n", strstr("toto./a.outtoto", av[0]));
   printf("strstr(\"totototototototo\", av[0]) : %s\n", strstr("totototototototo", av[0]));
+  printf("strstr(\"\", av[0]) : %s\n", strstr("", av[0]));
+  printf("strstr(av[0], \"\") : %s\n", strstr(av[0], ""));
+  printf("strstr(av[0], \"totototototototototo\") : %s\n", strstr(av[0], "totototototototototo"));
+  printf("strstr(av[0], \"./a.out./a.out\") : %s\n", strstr(av[0], "./a.out./a.out"));
 
   printf("---------------------------------------\n");
   printf("strpbrk(av[0], \"yolo\") : %s\n", strpbrk(av[0], "yolo"));
@@ -44,6 +48,13 @@ int main(int ac, char **av)
   printf("strcspn(av[0], \"o\") : %d\n", strcspn(av[0], "o"));
   printf("strcspn(av[0], \"pipi\") : %d\n", strcspn(av[0], "pipi"));
   printf("strcspn(av[0], \"\") : %d\n", strcspn(av[0], ""));
+
+  printf("---------------------------------------\n");
+  char test[11];
+  test[10] = 0;
+  printf("memset(test, 'A', 10) : %s\n", memset(test, 'A', 10));
+  printf("memset(test, 'B', 10) : %s\n", memset(test, 'B', 10));
+  printf("memset(test, 42, 10) : %s\n", memset(test, 42, 10));
 
   return 0;
 }
