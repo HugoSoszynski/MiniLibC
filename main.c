@@ -70,5 +70,11 @@ int main(int ac, char **av)
   write(1, &av[0][2], 1);
   printf("\n");
 
+  printf("---------------------------------------\n");
+  printf("rindex(av[0], '0'): %s\n", rindex(av[0], '0'));
+  printf("rindex(av[0], 'o'): %s\n", rindex(av[0], 'o'));
+  printf("rindex(av[0], 0): %s\n", rindex(av[0], 0));
+  printf("rindex(av[0], '/'): %s\n", rindex(av[0], '/'));
+
   return 0;
 }
