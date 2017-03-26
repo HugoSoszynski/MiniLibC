@@ -61,6 +61,9 @@ int main(int ac, char **av)
   printf("memcpy(test2, test, 10) : %s\n", memcpy(test2, test, 10));
   printf("memset(test, 42, 10) : %s\n", memset(test, 42, 10));
   printf("memcpy(test2, test, 10) : %s\n", memcpy(test2, test, 10));
+  printf("memset(test, 'A', 10) : %s\n", memset(test, 'A', 10));
+  printf("memcpy(test2 + 3, test, 3) : %s\n", memcpy(test2 + 3, test, 3));
+  printf("memcpy(test2 + 3, test2, 4) : %s\n", memmove(test2 + 3, test2, 4));
 
   printf("---------------------------------------\n");
   dprintf(1, "write(1, av[0][2], 1) : ");

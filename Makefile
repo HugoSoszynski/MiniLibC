@@ -5,7 +5,7 @@
 ## Login   <hugo.soszynski@epitech.eu>
 ## 
 ## Started on  Wed Mar  1 17:55:47 2017 Hugo SOSZYNSKI
-## Last update Sun Mar 26 20:32:28 2017 Hugo SOSZYNSKI
+## Last update Sun Mar 26 21:13:55 2017 Hugo SOSZYNSKI
 ##
 
 LD	= ld
@@ -31,6 +31,7 @@ SRCS	= sources/strlen.asm \
 	  sources/strcspn.asm \
 	  sources/memset.asm \
 	  sources/memcpy.asm \
+	  sources/memmove.asm \
 	  sources/write.asm \
 	  sources/read.asm
 
