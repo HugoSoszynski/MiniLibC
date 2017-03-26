@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 int main(int ac, char **av)
 {
@@ -55,6 +56,11 @@ int main(int ac, char **av)
   printf("memset(test, 'A', 10) : %s\n", memset(test, 'A', 10));
   printf("memset(test, 'B', 10) : %s\n", memset(test, 'B', 10));
   printf("memset(test, 42, 10) : %s\n", memset(test, 42, 10));
+
+  printf("---------------------------------------\n");
+  dprintf(1, "write(1, av[0][2], 1) : ");
+  write(1, &av[0][2], 1);
+  printf("\n");
 
   return 0;
 }
