@@ -1,8 +1,6 @@
 BITS 16
 ORG 0x0
 
-welcome:	db "TRAITORS !", 13, 10, 0
-
 init_seg:
 	mov ax, 0x07C0 		;amorçage du bios
 	mov ds, ax
@@ -16,6 +14,8 @@ init_seg:
 
 _end:
 	jmp _end
+
+welcome:	db "Welcome to OpenYggdrasil version 1.0", 13, 10, "The most badass kernel ever made !", 13, 10, 0
 
 write:
 	push ax
